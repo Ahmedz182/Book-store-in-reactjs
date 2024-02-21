@@ -51,7 +51,7 @@ const BookDetails = ({ id }) => {
                 <p className="text-l font-bold">
                   Written in :&nbsp;
                   <strong className="text-title-text/85">
-                    {bookDetail.category}
+                    {bookDetail.language}
                   </strong>
                 </p>
                 <p className="text-l  font-bold">
