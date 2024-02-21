@@ -16,6 +16,7 @@
     "react-scripts": "5.0.1",
     "react-share": "^5.1.0",
     "remixicon": "^4.1.0",
+    "swiper": "^11.0.6",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
