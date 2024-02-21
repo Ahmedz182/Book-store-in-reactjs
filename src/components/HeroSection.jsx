@@ -70,7 +70,7 @@ const HeroSection = () => {
               <p className=" text-4xl font-black uppercase text-title-text ">
                 Explore the Boundless World of Knowledge
               </p>
-              <p className=" text-3xl font-semibold uppercase tracking-normal text-title-text ">
+              <p className=" text-2xl font-semibold uppercase tracking-normal text-title-text ">
                 Elevate Your Reading Experience with our Diverse Blog Collection
               </p>
               <div className="btn float-left">
