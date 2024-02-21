@@ -14,7 +14,7 @@ const HeroSection = () => {
             Elevate Your Reading Experience
           </p>
           <div className="btn float-left">
-            <Link to="/books">
+            <Link to="/book">
               <button className="rounded border ms-2 text-title-text  float-start w-36 px-3 py-2 border-green/90 duration-300  hover:bg-green hover:text-white mt-4 ease-in-out font-semibold">
                 Explore Now
               </button>
