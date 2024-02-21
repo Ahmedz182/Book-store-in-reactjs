@@ -1,13 +1,168 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  font-family: "Montserrat", sans-serif;
+}
+.hero {
+  height: 77dvh;
+  overflow: hidden;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.quote {
+  height: 80dvh;
+  width: 100%;
+  display: flex;
+  background-color: #edf4f7ff;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  background: linear-gradient(
+      to bottom,
+      rgba(237, 244, 247, 0.856),
+      rgb(0 0 0 /0)
+    ),
+    url("./assets/img/bg-book-wall.jpg");
+  background-size: cover;
+  justify-content: center;
+}
+
+.bookimg {
+  width: 17dvw;
+
+  aspect-ratio: 1/1;
+  background-size: cover;
+}
+
+.bookItem {
+  width: 22dvw;
+}
+
+.blogimg {
+  aspect-ratio: 16/10;
+  background-size: cover;
+  transition: transform ease-in-out 300ms;
+}
+.blogcard {
+  border-radius: 10px;
+}
+.blog-desc {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.blogcard:hover > img {
+  filter: brightness(90%);
+}
+.social:hover {
+  filter: brightness(80%);
+}
+.showitem {
+  border-radius: 10%;
+  transform: rotate(-10deg);
+  /* From https://css.glass */
+
+  /* border: 1px solid rgba(255, 255, 255, 0.144); */
+}
+.showitem > .innershowitem {
+  transform: rotate(10deg);
+  background: rgba(255, 255, 255, 0.342);
+  border: 1px solid rgba(88, 88, 88, 0.171);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.014);
+  backdrop-filter: blur(9.7px);
+  -webkit-backdrop-filter: blur(9.7px);
+  border-radius: 10px;
+}
+
+.showitem:nth-child(1) {
+  background-color: #defff2ff;
+}
+.showitem:nth-child(2) {
+  background-color: rgb(243, 222, 255);
+}
+.showitem:nth-child(3) {
+  background-color: rgb(222, 235, 255);
+}
+.highlight-desc {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+.title {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.booktitle {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.shortdesc {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+li {
+  padding-bottom: 5px;
+}
+li:hover {
+  font-weight: bold;
+}
+
+ul:hover > :not(:hover) {
+  opacity: 0.4;
+  transform: 3ms ease;
+}
+.quotecard:nth-child(odd) {
+  background-color: #a1b6f179;
+}
+.quotecard:nth-child(even) {
+  background-color: #a1f1b279;
+}
+
+.bgquote {
+  aspect-ratio: 8/2;
+  background: linear-gradient(
+      to bottom,
+      rgba(156, 156, 156, 0.521),
+      rgba(70, 32, 32, 0.247)
+    ),
+    url("https://images.pexels.com/photos/2228585/pexels-photo-2228585.jpeg?cs=srgb&dl=pexels-thought-catalog-2228585.jpg&fm=jpg")
+      center/cover;
+}
+.resNav {
+  z-index: 1000;
+  height: 100dvh;
+  width: 100dvw;
+}
+.imgbookdetail {
+  aspect-ratio: 1/1;
+  width: 450px;
+  background-size: center/cover;
+}
+.detailBg {
+  background: url("https://icons.veryicon.com/png/o/miscellaneous/myicons/book-209.png");
+  background-size: cover;
+  width: 500px;
+  opacity: 0.05;
+}
+
+.videoitem:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+@media screen and (max-width: 950px) {
+  .videoitem:nth-child(even) {
+    flex-direction: column;
+  }
 }
