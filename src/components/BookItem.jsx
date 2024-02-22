@@ -5,6 +5,7 @@ const BookItem = ({ title, img, tags, category, id }) => {
   const navigate = useNavigate();
 
   const handelBook = () => {
+    window.scrollTo(0, 0);
     navigate(`/book/${id}`);
   };
   return (

@@ -119,7 +119,7 @@ li:hover {
   font-weight: bold;
 }
 
-ul:hover > :not(:hover) {
+.menufull:hover > :not(:hover) {
   opacity: 0.4;
   transform: 3ms ease;
 }

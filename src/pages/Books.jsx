@@ -84,7 +84,7 @@ const Books = () => {
         </div>
       </div>
       <div>
-        <div className="flex flex-col flex-wrap items-center justify-center pb-8">
+        <div className="flex flex-col flex-wrap items-center justify-center pb-8 animate-fade-down animate-ease-in-out animate-normal animate-fill-both">
           <div className="w-full gap-3 gap-y-6 p-10 flex flex-wrap justify-around">
             {filteredBooks.map(({ title, img, tags, language, _id }) => (
               <BookItem

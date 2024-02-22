@@ -12,7 +12,7 @@ const Lectures = () => {
       <p className="text-3xl text-center pb-6">
         Go to my Youtube page for all my lectures
       </p>
-      <div className=" flex flex-col gap-y-4">
+      <div className=" flex flex-col gap-y-4 animate-fade-right animate-ease animate-normal animate-fill-both">
         {lecture.map(({ title, desc, url }) => {
           return <LeactureItem url={url} title={title} description={desc} />;
         })}

@@ -39,8 +39,8 @@ const HeroSection = () => {
         autoplay={{ delay: 10000 }} // Set the delay to 5000 milliseconds (5 seconds)
       >
         <SwiperSlide>
-          <div className="bg-gray   flex flex-wrap justify-between px-20 mt-12 pt-6 sm:mt-12 sm:px-6">
-            <div className="hero gap-4 w-[50%] md:w-full sm:w-full flex flex-col p-1  justify-center leading-relaxed">
+          <div className="bg-gray    flex flex-wrap justify-between px-20 mt-12 pt-6 sm:mt-12 sm:px-6">
+            <div className="hero animate-fade-down animate-ease-in-out animate-normal animate-fill-both gap-4 w-[50%] md:w-full sm:w-full flex flex-col p-1  justify-center leading-relaxed">
               <p className=" text-5xl font-black uppercase text-title-text ">
                 Discover Knowledge.
               </p>
@@ -55,7 +55,7 @@ const HeroSection = () => {
                 </Link>
               </div>
             </div>
-            <div className="w-[45%] mt-5  lg:w-[50%] md:w-full sm:w-full sm:mt-0">
+            <div className="w-[45%] mt-5 animate-fade-up animate-ease-in-out animate-normal animate-fill-both lg:w-[50%] md:w-full sm:w-full sm:mt-0">
               <img
                 src={book}
                 alt="book"
@@ -65,8 +65,8 @@ const HeroSection = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="bg-gray   flex flex-wrap justify-between px-20 mt-12 pt-6 sm:mt-12 sm:px-6">
-            <div className="hero gap-4 w-[50%] md:w-full sm:w-full flex flex-col p-1  justify-center leading-relaxed">
+          <div className="bg-lightblue animate-fade-down animate-ease-in-out animate-normal animate-fill-both   flex flex-wrap justify-between px-20 mt-12 pt-6 sm:mt-12 sm:px-6">
+            <div className="hero  gap-4 w-[50%] md:w-full sm:w-full flex flex-col p-1  justify-center leading-relaxed">
               <p className=" text-4xl font-black uppercase text-title-text ">
                 Explore the Boundless World of Knowledge
               </p>

@@ -11,7 +11,7 @@ const QuoteSection = () => {
         .map(({ quote, author }) => {
           return (
             <>
-              <div className="flex gap-10 flex-col">
+              <div className="flex gap-10 flex-col ">
                 <p className="text-4xl font-bold tracking-normal text-title-text text-center sm:text-4xl">
                   `{quote}`
                 </p>

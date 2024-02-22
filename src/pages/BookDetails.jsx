@@ -13,6 +13,7 @@ import {
 } from "react-share";
 import BookSection from "./BookSection";
 import Title from "../components/Title";
+import CommentSection from "../components/CommentSection";
 const BookDetails = ({ id }) => {
   const location = useLocation();
   const linkaddress = window.location.href; // Store the current URL in linkaddress
@@ -36,7 +37,7 @@ const BookDetails = ({ id }) => {
 
   return (
     <>
-      <div className="mt-7 justify-between ">
+      <div className="mt-7 justify-between animate-fade-left animate-ease-in-out animate-normal animate-fill-both">
         {dataExists ? (
           <>
             <div className=" flex p-5  sm:flex-col  ">
@@ -118,6 +119,11 @@ const BookDetails = ({ id }) => {
               <p className="text-2xl font-bold">Description</p>
               <p className="py-3">{bookDetail.desc}</p>
             </div>
+            <div className="p-3 flex-col px-10 gap-3 sm:px-4 ">
+              <p className="text-2xl font-bold">Recent reviews</p>
+              <CommentSection />
+            </div>
+
             <Title title="Recent Books" />
             <BookSection />
           </>

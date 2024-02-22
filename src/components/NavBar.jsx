@@ -22,7 +22,7 @@ const NavBar = ({ sticky, title, Showmenu, setShowmenu }) => {
           </p>
         </NavLink>
 
-        <ul className="flex gap-4 uppercase  font-semibold py-1 px-2 cursor-pointer sm:hidden">
+        <ul className="flex menufull gap-4 uppercase  font-semibold py-1 px-2 cursor-pointer sm:hidden">
           <NavLink to="/" activeClassName="font-bold">
             <li className=" font-bold">Home</li>
           </NavLink>

@@ -12,6 +12,7 @@ module.exports = {
       'lightgreen': '#defff2ff',
       'lightblue': '#edf4f7ff',
       'white': '#ffff',
+      'goldenyellow': '#edc00cff'
 
     },
     screens: {
@@ -37,6 +38,8 @@ module.exports = {
 
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require('tailwindcss-animated')
+  ],
 }
 

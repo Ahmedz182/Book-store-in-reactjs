@@ -15,7 +15,7 @@ const Quotes = () => {
         </div>
       </div>
       <div>
-        <div className="flex  flex-wrap  gap-x-4  justify-around gap-y-7 p-8 py-8 ">
+        <div className="flex  flex-wrap  gap-x-4  justify-around gap-y-7 p-8 py-8 animate-flip-down animate-ease-in-out animate-normal animate-fill-both">
           {quotedata.map(({ quote, author, date, category }) => {
             return (
               <div className="min-w-[90dvw] quotecard bgquote shadow border border-title-text/5 shadow-title-text/35 sm:w-full   pb-3 gap-3 flex flex-col  cursor-pointer transform hover:translate-y-[-0.4rem] transition-transform duration-300 ease-in-out ">
