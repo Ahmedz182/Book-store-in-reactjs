@@ -22,8 +22,8 @@ const CommentSection = () => {
   };
   return (
     <>
-      <div className="flex items-center">
-        <div className="flex flex-col py-3 w-1/3 me-2 gap-3 sm:px-4 ">
+      <div className="flex items-center sm:flex-col">
+        <div className="flex flex-col py-3 w-1/3 me-2 gap-3 sm:px-4 sm:w-full">
           <p className="text-l font-bold items-center">
             <span className="text-green font-black pe-1">4.3</span>Rating based
             on
@@ -42,12 +42,12 @@ const CommentSection = () => {
             </button>
           </div>
         </div>
-        <span className="h-32 bg-title-text/20 w-[1px]  "></span>
-        <div className="flex flex-col px-10 gap-2">
+        <span className="h-32 bg-title-text/20 w-[1px]  sm:hidden"></span>
+        <div className="flex flex-col px-10 gap-2 w-2/3 sm:w-full sm:px-4">
           <p className="font-bold">Latest Review</p>
           <p className="font-semibold">Emily Selman</p>
           <p className="text-green font-black pe-1">4.3</p>
-          <p className="w-2/3">
+          <p>
             This is the bag of my dreams. I took it on my last vacation and was
             able to fit an absurd amount of snacks for the many long and hungry
             flights.
