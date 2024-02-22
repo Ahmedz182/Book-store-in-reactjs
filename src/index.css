@@ -177,3 +177,35 @@ li:hover {
 .swiper-button-prev:hover {
   color: rgba(11, 38, 41, 0.76);
 }
+.contact {
+  position: relative;
+  background: url("https://woorise.com/wp-content/uploads/2021/03/contact-form.png");
+  /* Other styles for your .contact class */
+}
+
+.contact::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(
+    212,
+    212,
+    212,
+    0.2
+  ); /* Adjust the last value (0.2) for the opacity of the black overlay */
+}
+
+.contact-text {
+  mix-blend-mode: difference;
+  color: black;
+}
+
+.formContact {
+  box-shadow: 2px 2px 5px rgba(5, 5, 5, 0.582);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+}

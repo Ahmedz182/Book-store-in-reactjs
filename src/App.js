@@ -9,6 +9,7 @@ import Blogs from "./pages/Blogs";
 import Quotes from "./pages/Quotes";
 import BookDetails from "./pages/BookDetails";
 import Lectures from "./pages/Lectures";
+import Contact from "./pages/Conatct";
 
 function App() {
   const [sticky, setSticky] = useState(false);
@@ -39,7 +40,7 @@ function App() {
           <Route path="/lectures" element={<Lectures />} />
           <Route path="/quotes" element={<Quotes />} />
           <Route path="/blog" element={<Blogs />} />
-          <Route path="/contact" element={<Books />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/book/:item" element={<BookDetails />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
