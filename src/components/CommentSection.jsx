@@ -37,7 +37,7 @@ const CommentSection = () => {
             </p>
             <button
               onClick={showModal}
-              className="button border p-2 px-10 w-max hover:bg-green transform duration-300 ease hover:text-white">
+              className="button border rounded p-2 px-10 w-max hover:bg-green transform duration-300 ease hover:text-white">
               Write a review
             </button>
           </div>
@@ -63,6 +63,7 @@ const CommentSection = () => {
         <Form
           name="basic"
           layout="vertical"
+          size="large"
           initialValues={{
             remember: false,
           }}
@@ -93,7 +94,7 @@ const CommentSection = () => {
             <TextArea />
           </Form.Item>
           <Form.Item
-            label="Rating"
+            label="Rating Star 1 - 5"
             name="rating"
             rules={[
               {

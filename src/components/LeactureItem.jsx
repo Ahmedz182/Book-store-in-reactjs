@@ -2,7 +2,7 @@ import React from "react";
 
 const LeactureItem = ({ url, title, description }) => {
   return (
-    <div className="flex videoitem  border border-title-text/45 gap-x-5 rounded p-3 sm:flex-col sm:gap-y-3">
+    <div className="flex  formContact   gap-x-5 rounded p-3 sm:flex-col sm:gap-y-3">
       <iframe
         className="w-2/4 h-96 sm:w-[100%] "
         src={url}
