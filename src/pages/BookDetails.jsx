@@ -47,7 +47,7 @@ const BookDetails = ({ id }) => {
 
   return (
     <>
-      <div className="mt-7 justify-between animate-fade-left animate-ease-in-out animate-normal animate-fill-both">
+      <div className="mt-8 justify-between animate-fade-left animate-ease-in-out animate-normal animate-fill-both">
         {dataExists ? (
           <>
             <div className=" flex p-5  sm:flex-col  ">
@@ -57,7 +57,7 @@ const BookDetails = ({ id }) => {
                 alt={`Cover of the book "${bookDetail.title}"`}
               />
 
-              <div className="flex  flex-col py-12 gap-2 w-full  ">
+              <div className="flex  flex-col py-12 gap-2 w-full ms-5 ">
                 <p className="text-2xl font-bold">{bookDetail.title}</p>
                 <p className="text-l font-bold">
                   Written in :&nbsp;
@@ -78,6 +78,15 @@ const BookDetails = ({ id }) => {
                 ) : (
                   "No Reviews"
                 )}
+                <div className="flex gap-x-1">
+                  {bookDetail.tags.slice(0, 3).map((tag) => (
+                    <p
+                      key={tag}
+                      className="font-medium  rounded mx-[1px] p-[2px] px-[4px] border bg-title-text/85 text-white">
+                      {tag}
+                    </p>
+                  ))}
+                </div>
                 <p className="text w-3/4 shortdesc text-title-text/70 font-semibold">
                   {bookDetail.short_desc}
                 </p>
@@ -106,30 +115,43 @@ const BookDetails = ({ id }) => {
                   </div>
                 </div>
                 <div className="flex gap-2 justify-bottom mt-4">
-                  <a
-                    href={bookDetail.buyPrint}
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    <button className="border bg-title-text/90 hover:bg-title-text cursor-pointer p-2 rounded text-white text-sm">
-                      Buy Hard Copy
-                    </button>
-                  </a>
-                  <a
-                    href={bookDetail.buySoft}
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    <button className="border bg-title-text/90 hover:bg-title-text cursor-pointer p-2 rounded text-white text-sm">
-                      Buy Ebook
-                    </button>
-                  </a>
-                  <a
-                    href={bookDetail.readbook}
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    <button className="border bg-title-text/90 hover:bg-title-text cursor-pointer p-2 rounded text-white text-sm">
-                      Read Ebook
-                    </button>
-                  </a>
+                  {bookDetail.buyPrint && (
+                    <>
+                      <a
+                        href={bookDetail.buyPrint}
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        <button className="border bg-title-text/90 hover:bg-title-text cursor-pointer p-2 rounded text-white text-sm">
+                          Buy Hard Copy
+                        </button>
+                      </a>
+                    </>
+                  )}
+
+                  {bookDetail.buySoft && (
+                    <>
+                      <a
+                        href={bookDetail.buySoft}
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        <button className="border bg-title-text/90 hover:bg-title-text cursor-pointer p-2 rounded text-white text-sm">
+                          Buy E-Book
+                        </button>
+                      </a>
+                    </>
+                  )}
+                  {bookDetail.readbook && (
+                    <>
+                      <a
+                        href={bookDetail.readbook}
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        <button className="border bg-title-text/90 hover:bg-title-text cursor-pointer p-2 rounded text-white text-sm">
+                          Read E-Book
+                        </button>
+                      </a>
+                    </>
+                  )}
                 </div>
               </div>
               <div className="detailBg px-[1.25rem]"></div>

@@ -1,4 +1,6 @@
 const bookdata = [
+
+
     {
         _id: {
             $oid: "1",
@@ -6,8 +8,7 @@ const bookdata = [
         img: "https://img1.wsimg.com/isteam/ip/aac82609-dc6f-406f-8663-cdaa1bf3715d/1670958024.png/:/cr=t:0%25,l:20.65%25,w:58.7%25,h:100%25/rs=w:388,h:517,cg:true",
         title: "Enterprise Service Management (ESM)",
         author: "Enamul Haque.",
-        buyPrint:
-            "https://www.lulu.com/shop/enamul-haque/enterprise-service-management-esm/paperback/product-rpy9jr.html?page=1&pageSize=4",
+        buyPrint: "https://www.lulu.com/shop/enamul-haque/enterprise-service-management-esm/paperback/product-rpy9jr.html?page=1&pageSize=4",
         buySoft: "https://play.google.com/store/books/details?id=q4inEAAAQBAJ",
         readbook:
             "https://www.google.co.uk/books/edition/Enterprise_Service_Management_ESM/q4inEAAAQBAJ?hl=en",

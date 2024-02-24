@@ -1,6 +1,6 @@
 const categoryData = [
     {
-        "language": ["ENGLISH", "BANGLA"],
+        "language": ["ENGLISH", "BANGLA", "Urdu"],
     },
 
 ]
