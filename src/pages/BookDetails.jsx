@@ -14,11 +14,13 @@ import {
 import BookSection from "./BookSection";
 import Title from "../components/Title";
 import CommentSection from "../components/CommentSection";
+import reviewData from "../assets/json/review";
 const BookDetails = ({ id }) => {
   const location = useLocation();
   const linkaddress = window.location.href; // Store the current URL in linkaddress
   const currentRoute = location.pathname;
   const bookid = currentRoute.split("/")[2];
+  const idbook = bookid;
   const [bookDetail, setBookDetail] = useState(null);
   const [dataExists, setDataExists] = useState(false);
   useEffect(() => {
@@ -34,6 +36,14 @@ const BookDetails = ({ id }) => {
       setDataExists(false);
     }
   }, [location.pathname, id, bookid]);
+
+  const currentbook = reviewData.filter((review) => review.bookid === idbook);
+  const length = currentbook.length;
+  const totalRating = currentbook
+    .filter((item) => item.rating)
+    .reduce((acc, cur) => acc + cur.rating, 0);
+  const avgRating =
+    length > 0 ? Math.round((totalRating / length) * 10) / 10 : 0;
 
   return (
     <>
@@ -55,10 +65,19 @@ const BookDetails = ({ id }) => {
                     {bookDetail.language}
                   </strong>
                 </p>
-                <p className="text-l  font-bold">
-                  Reviews :&nbsp;
-                  <strong className="text-title-text/85">4.3/5</strong>
-                </p>
+
+                {avgRating ? (
+                  <>
+                    <p className="text-l  font-bold">
+                      Rating :&nbsp;
+                      <strong className="text-title-text/85">
+                        {avgRating} / 5
+                      </strong>
+                    </p>
+                  </>
+                ) : (
+                  "No Reviews"
+                )}
                 <p className="text w-3/4 shortdesc text-title-text/70 font-semibold">
                   {bookDetail.short_desc}
                 </p>
@@ -121,7 +140,7 @@ const BookDetails = ({ id }) => {
             </div>
             <div className="p-3 flex-col px-10 gap-3 sm:px-4 ">
               <p className="text-2xl font-bold">Recent reviews</p>
-              <CommentSection />
+              <CommentSection id={bookid} />
             </div>
 
             <Title title="Recent Books" />
